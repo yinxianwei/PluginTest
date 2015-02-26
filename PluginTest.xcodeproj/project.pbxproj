@@ -6,8 +6,14 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D090F2D91A9F0ADB005CDF6C /* PluginT.m in Sources */ = {isa = PBXBuildFile; fileRef = D090F2D81A9F0ADB005CDF6C /* PluginT.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		D0F438461A9EF8DF002CFBBF /* PluginTest.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginTest.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D090F2D71A9F0ADB005CDF6C /* PluginT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluginT.h; sourceTree = "<group>"; };
+		D090F2D81A9F0ADB005CDF6C /* PluginT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PluginT.m; sourceTree = "<group>"; };
+		D0F438461A9EF8DF002CFBBF /* PluginTest.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginTest.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F4384A1A9EF8DF002CFBBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,7 +39,7 @@
 		D0F438471A9EF8DF002CFBBF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0F438461A9EF8DF002CFBBF /* PluginTest.bundle */,
+				D0F438461A9EF8DF002CFBBF /* PluginTest.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				D0F4384A1A9EF8DF002CFBBF /* Info.plist */,
+				D090F2D71A9F0ADB005CDF6C /* PluginT.h */,
+				D090F2D81A9F0ADB005CDF6C /* PluginT.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -71,7 +79,7 @@
 			);
 			name = PluginTest;
 			productName = PluginTest;
-			productReference = D0F438461A9EF8DF002CFBBF /* PluginTest.bundle */;
+			productReference = D0F438461A9EF8DF002CFBBF /* PluginTest.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -120,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D090F2D91A9F0ADB005CDF6C /* PluginT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,11 +213,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "${HOME}/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				GCCENABLEOBJC_GC = supported;
 				INFOPLIST_FILE = PluginTest/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "${HOME}/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Debug;
 		};
@@ -216,11 +228,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCCENABLEOBJC_GC = supported;
 				INFOPLIST_FILE = PluginTest/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "${HOME}/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Release;
 		};
@@ -243,6 +256,7 @@
 				D0F4384F1A9EF8DF002CFBBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
